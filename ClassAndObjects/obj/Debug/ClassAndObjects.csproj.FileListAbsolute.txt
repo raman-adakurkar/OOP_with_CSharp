@@ -1,0 +1,7 @@
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\bin\Debug\ClassAndObjects.exe.config
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\bin\Debug\ClassAndObjects.exe
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\bin\Debug\ClassAndObjects.pdb
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\obj\Debug\ClassAndObjects.csprojAssemblyReference.cache
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\obj\Debug\ClassAndObjects.csproj.CoreCompileInputs.cache
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\obj\Debug\ClassAndObjects.exe
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\ClassAndObjects\obj\Debug\ClassAndObjects.pdb
