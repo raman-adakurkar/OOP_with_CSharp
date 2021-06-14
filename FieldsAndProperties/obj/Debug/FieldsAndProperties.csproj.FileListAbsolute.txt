@@ -1,0 +1,6 @@
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\FieldsAndProperties\bin\Debug\FieldsAndProperties.exe.config
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\FieldsAndProperties\bin\Debug\FieldsAndProperties.exe
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\FieldsAndProperties\bin\Debug\FieldsAndProperties.pdb
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\FieldsAndProperties\obj\Debug\FieldsAndProperties.csproj.CoreCompileInputs.cache
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\FieldsAndProperties\obj\Debug\FieldsAndProperties.exe
+C:\Users\raman\Desktop\C#\4. OOP_with_CSharp\FieldsAndProperties\obj\Debug\FieldsAndProperties.pdb

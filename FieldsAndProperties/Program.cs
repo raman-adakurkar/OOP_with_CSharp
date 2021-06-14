@@ -8,10 +8,11 @@ namespace ClassAndObjects
 {
     public class Ninja
     {
-        // Initializing properties for class
+        // These are fields and these are for internal use of class are must be private
         private int height;
         private int weight;
 
+        // These are Properties and these are for external use and can be public
         public int Height { get; set; }
         public int Weight { get; set; }
     }
@@ -19,15 +20,12 @@ namespace ClassAndObjects
     {
         static void Main(string[] args)
         {
-            // Creating object for Ninja class
             Ninja raman = new Ninja();
 
-            // Accessing properties of object raman from Ninja Class
             raman.Height = 174;
             raman.Weight = 74;
 
-            // Displaying raman on console with properties
-            Console.WriteLine("Raman's Height = " + raman.Height + "\nRaman's Weight = " + raman.Weight);
+            Console.WriteLine("Raman's Height : " + raman.Height + "\nRaman's Weight : " + raman.Weight);
             Console.WriteLine();
         }
     }
