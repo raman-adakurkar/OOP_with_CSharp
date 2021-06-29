@@ -1,0 +1,7 @@
+G:\OOP_with_CSharp\Static\bin\Debug\Static.exe.config
+G:\OOP_with_CSharp\Static\bin\Debug\Static.exe
+G:\OOP_with_CSharp\Static\bin\Debug\Static.pdb
+G:\OOP_with_CSharp\Static\obj\Debug\Static.csprojAssemblyReference.cache
+G:\OOP_with_CSharp\Static\obj\Debug\Static.csproj.CoreCompileInputs.cache
+G:\OOP_with_CSharp\Static\obj\Debug\Static.exe
+G:\OOP_with_CSharp\Static\obj\Debug\Static.pdb
