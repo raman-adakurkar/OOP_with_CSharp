@@ -1,0 +1,7 @@
+G:\OOP_with_CSharp\Enumerations\bin\Debug\Enumerations.exe.config
+G:\OOP_with_CSharp\Enumerations\bin\Debug\Enumerations.exe
+G:\OOP_with_CSharp\Enumerations\bin\Debug\Enumerations.pdb
+G:\OOP_with_CSharp\Enumerations\obj\Debug\Enumerations.csprojAssemblyReference.cache
+G:\OOP_with_CSharp\Enumerations\obj\Debug\Enumerations.csproj.CoreCompileInputs.cache
+G:\OOP_with_CSharp\Enumerations\obj\Debug\Enumerations.exe
+G:\OOP_with_CSharp\Enumerations\obj\Debug\Enumerations.pdb
