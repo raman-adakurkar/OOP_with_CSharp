@@ -1,0 +1,14 @@
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\bin\Debug\MagicDestroyers.exe.config
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\bin\Debug\MagicDestroyers.exe
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\bin\Debug\MagicDestroyers.pdb
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\obj\Debug\MagicDestroyers.csprojAssemblyReference.cache
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\obj\Debug\MagicDestroyers.csproj.CoreCompileInputs.cache
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\obj\Debug\MagicDestroyers.exe
+C:\Users\raman\Desktop\C#\Project\MagicDestroyers\obj\Debug\MagicDestroyers.pdb
+G:\Project\MagicDestroyers\bin\Debug\MagicDestroyers.exe.config
+G:\Project\MagicDestroyers\bin\Debug\MagicDestroyers.exe
+G:\Project\MagicDestroyers\bin\Debug\MagicDestroyers.pdb
+G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.csprojAssemblyReference.cache
+G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.csproj.CoreCompileInputs.cache
+G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.exe
+G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.pdb
