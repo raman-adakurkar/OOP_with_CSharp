@@ -1,81 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MagicDestroyers.Enums;
-using MagicDestroyers.Equipment.Armors.Chainlink;
-using MagicDestroyers.Equipment.Armors.LightLeatherVest;
-using MagicDestroyers.Equipment.Weapons.Sword;
+using MagicDestroyers.Equipment.Armors.Leather;
+using MagicDestroyers.Equipment.Weapons.Sharp;
 
-namespace MagicDestroyers.Characters.Melee.Assassin
+namespace MagicDestroyers.Characters.Melee
 {
-    class Assassin : Melee
+    public class Assassin : Melee
     {
-        // Constants
-        private const string DEFAULT_NAME = "Assassin";
-        private const Faction DEFAULT_FACTION = Faction.Meele;
-
-        private const int DEFAULT_ABILITY_POINTS = 0;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_LEVEL = 0;
-
+        // Fields
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
         // Constructors
         public Assassin()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Assassin.NAME, 1)
         {
-
         }
 
-        public Assassin(string Name, int Level)
-            : this(Name, Level, DEFAULT_HEALTH_POINTS)
+        public Assassin(string name, int level)
+            : this(name, level, Consts.Assassin.HEALTH_POINTS)
         {
-
         }
 
-        public Assassin(string Name, int Level, int HealthPoints)
+        public Assassin(string name, int level, int healthPoints)
         {
-            base.Name = Name;
-            base.Level = Level;
-            base.HealthPoints = HealthPoints;
-            base.Faction = DEFAULT_FACTION;
-            base.AbilityPoints = DEFAULT_ABILITY_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.AbilityPoints = Consts.Assassin.ABILITY_POINTS;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
+            base.Faction = Faction.Meele;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         // Methods
-        public void Raze()
+        public int Raze()
         {
-            
+            return base.Weapon.DamagePoints + 10;
         }
 
-        public void BleedToDeath()
+        public int BleedToDeath()
         {
-
+            throw new NotImplementedException();
         }
 
-        public void Survival()
+        public int Survival()
         {
-
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Raze();
+            return this.Raze();
         }
 
-        public override void Defend()
+        public override int SpecialAttack()
         {
-            this.Survival();
+            return this.BleedToDeath();
         }
 
-        public override void SpecialAttack()
+        public override int Defend()
         {
-            this.BleedToDeath();
+            return this.Survival();
         }
     }
 }

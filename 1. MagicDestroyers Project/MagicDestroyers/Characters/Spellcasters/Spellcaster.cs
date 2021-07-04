@@ -1,37 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Spellcasters
 {
     public abstract class Spellcaster : Character
     {
-        // Fields
         private int manaPoints;
 
-        // Properties
         public int ManaPoints
         {
             get
             {
-                return manaPoints;
+                return this.manaPoints;
             }
             set
             {
-                if (value >= 0)
+                if (value >= 0 && value <= 100)
                 {
-                    manaPoints = value;
+                    this.manaPoints = value;
                 }
-
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 10.");
                 }
             }
         }
-
-
     }
 }

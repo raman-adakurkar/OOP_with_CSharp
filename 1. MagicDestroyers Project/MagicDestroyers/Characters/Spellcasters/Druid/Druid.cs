@@ -1,80 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MagicDestroyers.Enums;
-using MagicDestroyers.Equipment.Armors.LightLeatherVest;
-using MagicDestroyers.Equipment.Weapons.Staff;
+using MagicDestroyers.Equipment.Armors.Leather;
+using MagicDestroyers.Equipment.Weapons.Blunt;
 
-namespace MagicDestroyers.Characters.Spellcasters.Druid
+namespace MagicDestroyers.Characters.Spellcasters
 {
     public class Druid : Spellcaster
     {
-        // Constants
-        private const string DEFAULT_NAME = "Druid";
-        private const Faction DEFAULT_FACTION = Faction.Spellcaster;
-
-        private const int DEFAULT_MANA_POINTS = 0;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_LEVEL = 0;
-
+        // Fields
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
         // Constructors
         public Druid()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Druid.NAME, 1)
         {
-
         }
 
-        public Druid(string Name, int Level)
-            : this(Name, Level, DEFAULT_HEALTH_POINTS)
+        public Druid(string name, int level)
+            : this(name, level, Consts.Druid.HEALTH_POINTS)
         {
-
         }
 
-        public Druid(string Name, int Level, int HealthPoints)
+        public Druid(string name, int level, int healthPoints)
         {
-            base.Name = Name;
-            base.Level = Level;
-            base.HealthPoints = HealthPoints;
-            base.Faction = DEFAULT_FACTION;
-            base.ManaPoints = DEFAULT_MANA_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.ManaPoints = Consts.Druid.MANA_POINTS;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
+            this.Faction = Faction.Spellcaster;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         // Methods
-        public void Moonfire()
+        public int Moonfire()
         {
-
+            return base.Weapon.DamagePoints + 10;
         }
 
-        public void Starburst()
+        public int Starburst()
         {
-
+            throw new NotImplementedException();
         }
 
-        public void OneWithTheNature()
+        public int OneWithTheNature()
         {
-
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Moonfire();
+            return this.Moonfire();
         }
 
-        public override void Defend()
+        public override int SpecialAttack()
         {
-            this.OneWithTheNature();
+            return this.Starburst();
         }
 
-        public override void SpecialAttack()
+        public override int Defend()
         {
-            this.Starburst();
+            return this.OneWithTheNature();
         }
     }
 }

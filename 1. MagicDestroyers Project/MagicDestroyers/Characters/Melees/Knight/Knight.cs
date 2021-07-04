@@ -1,80 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MagicDestroyers.Enums;
-using MagicDestroyers.Equipment.Armors.Chainlink;
-using MagicDestroyers.Equipment.Weapons.Hammer;
+using MagicDestroyers.Equipment.Armors.Heavy;
+using MagicDestroyers.Equipment.Weapons.Blunt;
 
-namespace MagicDestroyers.Characters.Melee.Knight
+namespace MagicDestroyers.Characters.Melee
 {
     public class Knight : Melee
     {
-        // Constants
-        private const string DEFAULT_NAME = "Knight";
-        private const Faction DEFAULT_FACTION = Faction.Meele;
-
-        private const int DEFAULT_ABILITY_POINTS = 0;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_LEVEL = 0;
-
+        // Fields
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         private readonly Hammer DEFAULT_WEAPON = new Hammer();
 
         // Constructors
         public Knight()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Knight.NAME, 1)
         {
-
         }
 
-        public Knight(string Name, int Level)
-            : this(Name, Level, DEFAULT_HEALTH_POINTS)
+        public Knight(string name, int level)
+            : this(name, level, Consts.Knight.HEALTH_POINTS)
         {
-
         }
 
-        public Knight(string Name, int Level, int HealthPoints)
+        public Knight(string name, int level, int healthPoints)
         {
-            base.Name = Name;
-            base.Level = Level;
-            base.HealthPoints = HealthPoints;
-            base.Faction = DEFAULT_FACTION;
-            base.AbilityPoints = DEFAULT_ABILITY_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.AbilityPoints = Consts.Knight.ABILITY_POINTS;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
+            base.Faction = Faction.Meele;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         // Methods
-        public void HolyBlow()
+        public int HolyBlow()
         {
-
+            return base.Weapon.DamagePoints + 10;
         }
 
-        public void PurifySoul()
+        public int PurifySoul()
         {
-
+            throw new NotImplementedException();
         }
 
-        public void RighteousWings()
+        public int RighteousWings()
         {
-
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.HolyBlow();
+            return this.HolyBlow();
         }
 
-        public override void Defend()
+        public override int SpecialAttack()
         {
-            this.RighteousWings();
+            return this.PurifySoul();
         }
 
-        public override void SpecialAttack()
+        public override int Defend()
         {
-            this.PurifySoul();
+            return this.RighteousWings();
         }
     }
 }

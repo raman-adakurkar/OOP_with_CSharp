@@ -1,80 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MagicDestroyers.Enums;
-using MagicDestroyers.Equipment.Armors.LightLeatherVest;
-using MagicDestroyers.Equipment.Weapons.Sword;
+using MagicDestroyers.Equipment.Armors.Leather;
+using MagicDestroyers.Equipment.Weapons.Sharp;
 
-namespace MagicDestroyers.Characters.Spellcasters.Necromancer
+namespace MagicDestroyers.Characters.Spellcasters
 {
     public class Necromancer : Spellcaster
     {
-        // Constants
-        private const string DEFAULT_NAME = "Necromancer";
-        private const Faction DEFAULT_FACTION = Faction.Spellcaster;
-
-        private const int DEFAULT_MANA_POINTS = 0;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_LEVEL = 0;
-
+        // Fields
         private readonly LightLeatherVest DEFAULT_BODY_ARMOR = new LightLeatherVest();
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
         // Constructors
         public Necromancer()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Necromancer.NAME, 1)
         {
-
         }
 
-        public Necromancer(string Name, int Level)
-            : this(Name, Level, DEFAULT_HEALTH_POINTS)
+        public Necromancer(string name, int level)
+            : this(name, level, Consts.Necromancer.HEALTH_POINTS)
         {
-
         }
 
-        public Necromancer(string Name, int Level, int HealthPoints)
+        public Necromancer(string name, int level, int healthPoints)
         {
-            base.Name = Name;
-            base.Level = Level;
-            base.HealthPoints = HealthPoints;
-            base.Faction = DEFAULT_FACTION;
-            base.ManaPoints = DEFAULT_MANA_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.ManaPoints = Consts.Necromancer.MANA_POINTS;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
+            base.Faction = Faction.Spellcaster;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         // Methods
-        public void ShadowRage()
+        public int ShadowRage()
         {
-
+            return base.Weapon.DamagePoints + 10;
         }
 
-        public void VampireTouch()
+        public int VampireTouch()
         {
-
-        }
-            
-        public void BoneShield()
-        {
-
+            throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public int BoneShield()
         {
-            this.ShadowRage();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public override void Defend()
+        public override int Attack()
         {
-            this.BoneShield();
+            return this.ShadowRage();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.VampireTouch();
+            return this.VampireTouch();
+        }
+
+        public override int Defend()
+        {
+            return this.BoneShield();
         }
     }
 }

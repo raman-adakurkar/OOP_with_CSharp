@@ -12,3 +12,10 @@ G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.csprojAssemblyReference.cac
 G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.csproj.CoreCompileInputs.cache
 G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.exe
 G:\Project\MagicDestroyers\obj\Debug\MagicDestroyers.pdb
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\bin\Debug\MagicDestroyers.exe.config
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\bin\Debug\MagicDestroyers.exe
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\bin\Debug\MagicDestroyers.pdb
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\obj\Debug\MagicDestroyers.csprojAssemblyReference.cache
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\obj\Debug\MagicDestroyers.csproj.CoreCompileInputs.cache
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\obj\Debug\MagicDestroyers.exe
+G:\OOP_with_CSharp\1. MagicDestroyers Project\MagicDestroyers\obj\Debug\MagicDestroyers.pdb

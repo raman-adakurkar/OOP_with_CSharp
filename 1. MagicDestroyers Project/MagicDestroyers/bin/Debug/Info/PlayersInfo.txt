@@ -1,0 +1,6 @@
+Aish,10,2
+Navjyot,12,2
+Karan,13,2
+Nehal,4,1
+Ramdas,4,1
+Raman,6,1

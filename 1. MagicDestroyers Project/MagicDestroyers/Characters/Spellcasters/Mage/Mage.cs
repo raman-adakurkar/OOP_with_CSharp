@@ -1,80 +1,70 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MagicDestroyers.Enums;
-using MagicDestroyers.Equipment.Armors.ClothRobe;
-using MagicDestroyers.Equipment.Weapons.Staff;
+using MagicDestroyers.Equipment.Armors.Light;
+using MagicDestroyers.Equipment.Weapons.Blunt;
 
-namespace MagicDestroyers.Characters.Spellcasters.Mage
+namespace MagicDestroyers.Characters.Spellcasters
 {
+
     public class Mage : Spellcaster
     {
-        // Constants
-        private const string DEFAULT_NAME = "Mage";
-        private const Faction DEFAULT_FACTION = Faction.Spellcaster;
-
-        private const int DEFAULT_MANA_POINTS = 0;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const int DEFAULT_LEVEL = 0;
-
+        // Fields
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
         // Constructors
         public Mage()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Mage.NAME, 1)
         {
-
         }
 
-        public Mage(string Name, int Level)
-            : this(Name, Level, DEFAULT_HEALTH_POINTS)
+        public Mage(string name, int level)
+            : this(name, level, Consts.Mage.HEALTH_POINTS)
         {
-
         }
 
-        public Mage(string Name, int Level, int HealthPoints)
+        public Mage(string name, int level, int healthPoints)
         {
-            base.Name = Name;
-            base.Level = Level;
-            base.HealthPoints = HealthPoints;
-            base.Faction = DEFAULT_FACTION;
-            base.ManaPoints = DEFAULT_MANA_POINTS;
-            this.Weapon = DEFAULT_WEAPON;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Name = name;
+            base.Level = level;
+            base.HealthPoints = healthPoints;
+            base.ManaPoints = Consts.Mage.MANA_POINTS;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
+            base.Faction = Faction.Spellcaster;
+            base.IsAlive = true;
+            base.Scores = 0;
         }
 
         // Methods
-        public void ArcaneWrath()
+        public int Fireball()
         {
-
+            return base.Weapon.DamagePoints + 10;
         }
 
-        public void Firewall()
+        public int ArcaneWrath()
         {
-
+            throw new NotImplementedException();
         }
 
-        public void Meditation()
+        public int Meditation()
         {
-
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.ArcaneWrath();
+            return this.Fireball();
         }
 
-        public override void Defend()
+        public override int SpecialAttack()
         {
-            this.Meditation();
+            return this.ArcaneWrath();
         }
 
-        public override void SpecialAttack()
+        public override int Defend()
         {
-            this.Firewall();
+            return this.Meditation();
         }
     }
 }

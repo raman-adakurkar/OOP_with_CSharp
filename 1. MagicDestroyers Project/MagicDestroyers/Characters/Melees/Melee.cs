@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicDestroyers.Characters.Melee
 {
     public abstract class Melee : Character
     {
-        // Fields
         private int abilityPoints;
 
-        // Properties
         public int AbilityPoints
         {
             get
@@ -20,14 +14,13 @@ namespace MagicDestroyers.Characters.Melee
             }
             set
             {
-                if (value >= 0)
+                if (value >= 0 && value <= 100)
                 {
                     this.abilityPoints = value;
                 }
-
                 else
                 {
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(string.Empty, "Inappropriate value, the value should be >= 0 and <= 10.");
                 }
             }
         }
